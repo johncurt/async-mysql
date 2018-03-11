@@ -1,8 +1,8 @@
 AsyncMySQL - Asynchronous MySQL Query Manager
 =============================================
 
-AsyncMySQL helps you manage several asynchronous queries with callbacks
-on success or failure. It can be used by itself to speed up concurrent
+AsyncMySQL helps manage several asynchronous queries with callbacks on 
+success or failure. It can be used by itself to speed up concurrent queries
 in a single model, or in conjunction with an asynchronous library such
 as Amp or Ratchet.
 
