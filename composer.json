@@ -1,6 +1,6 @@
 {
     "name": "johncurt/async-mysql",
-    "description": "A class for processing a group of async mysql queries",
+    "description": "AsyncMySQL - Asynchronous MySQL Query Manager",
     "type": "library",
     "license": "Apache-2.0",
     "authors": [
