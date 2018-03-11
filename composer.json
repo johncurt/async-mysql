@@ -1,0 +1,24 @@
+{
+    "name": "johncurt/async-mysql",
+    "description": "A class for processing a group of async mysql queries",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "John Fansler",
+            "email": "john.fansler@gmail.com",
+            "homepage": "https://johnfansler.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "~7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.1@dev"
+    },
+    "autoload": {
+        "psr-4": {"JohnCurt\\AsyncMySQL\\": "src/"}
+    }
+}
