@@ -14,8 +14,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": "~7.0",
-        "ext-mysqli": "~7.0",
+        "php": ">=7.0",
+        "ext-mysqli": ">=7.0",
         "ext-mysqlnd": "^0.0.0"
     },
     "require-dev": {
