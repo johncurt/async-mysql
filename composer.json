@@ -1,6 +1,7 @@
 {
     "name": "johncurt/async-mysql",
     "description": "AsyncMySQL - Asynchronous MySQL Query Manager",
+    "keywords": ["async","mysql","async-mysql","asynchronous","sql"],
     "type": "library",
     "license": "Apache-2.0",
     "authors": [
