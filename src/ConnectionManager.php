@@ -21,7 +21,7 @@ class ConnectionManager {
 
 	private $mysqliArgs = [];
 
-	/** @var \AsyncMySQL\Query[] $queries */
+	/** @var \JohnCurt\AsyncMySQL\Query[] $queries */
 	protected $queries = [];
 
 	/** @var \mysqli[] $links */
@@ -81,7 +81,7 @@ class ConnectionManager {
 	/**
 	 * Adds the query to the queue and starts running it.
 	 *
-	 * @param \AsyncMySQL\Query $query
+	 * @param \JohnCurt\AsyncMySQL\Query $query
 	 * @return bool
 	 */
 	public function runQuery(Query &$query){

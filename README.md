@@ -27,7 +27,7 @@ the queries to a database (one connection per query) and polls the
 connections to see if they are ready to be reaped. Pass all of your
 connection data into it.
 
-`$conn = new \JohnCurt\AsyncMySQL\ConnectionManager('127.0.0.1', 'user', 'pass', 'schema', 3306)` 
+`$conn = new \JohnCurt\AsyncMySQL\ConnectionManager('127.0.0.1', 'user', 'pass', 'schema', 3306);` 
 
 Then you instantiate a Query for each query that you will be attaching.
 Be sure to pass in callbacks (or null if no callback is needed), making
@@ -38,7 +38,7 @@ scope of the callback.
 
 `$failure1 = function(string $error) use (&$error1) { $error1 = $error;};`
 
-`$query = new \JohnCurt\AsyncMySQL\Query('SELECT * FROM table WHERE 1', $success1, $failure1)`
+`$query = new \JohnCurt\AsyncMySQL\Query('SELECT * FROM table WHERE 1', $success1, $failure1);`
 
 Once the query is instantiated, you can send it off for processing:
 
@@ -56,7 +56,7 @@ or
 
 `$conn->reapAll();` (blocking)
 
-You can also pass in a timeout to the reapAll method that will cause it to
+You can also pass in a timeout to the `reapAll` method that will cause it to
 stop waiting for queries to finish after the prescribed seconds.
 
 Contact
