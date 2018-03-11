@@ -34,11 +34,13 @@ Be sure to pass in callbacks (or null if no callback is needed), making
 use of the `use` construct to gain access to variables outside the
 scope of the callback.
 
-`$success1 = function(\mysqli_request $request) use (&$request1) { $request1 = $request;};`
+```
+$success1 = function(\mysqli_request $request) use (&$request1) { $request1 = $request;};
 
-`$failure1 = function(string $error) use (&$error1) { $error1 = $error;};`
+$failure1 = function(string $error) use (&$error1) { $error1 = $error;};
 
-`$query = new \JohnCurt\AsyncMySQL\Query('SELECT * FROM table WHERE 1', $success1, $failure1);`
+$query = new \JohnCurt\AsyncMySQL\Query('SELECT * FROM table WHERE 1', $success1, $failure1);
+```
 
 Once the query is instantiated, you can send it off for processing:
 
