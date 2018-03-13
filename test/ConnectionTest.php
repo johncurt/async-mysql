@@ -111,4 +111,25 @@ class ConnectionTest extends \PHPUnit\Framework\TestCase {
 		$this->assertTrue($successVar);
 		$this->assertEquals(0, $conn->getActiveQueryCount());
 	}
+	public function testResultsCanBeReceivedAndTraversed(){
+		$conn = new ConnectionManager('127.0.0.1','root','root','test',33060);
+		/** @var mysqli_result $result1 */
+		$result1 = null;
+		/** @var mysqli_result $result2 */
+		$result2 = null;
+		$success1 = function($result) use (&$result1) {$result1=$result;};
+		$success2 = function($result) use (&$result2) {$result2=$result;};
+		$query1 = new Query('SELECT 1 as num;',$success1);
+		$query2 = new Query('SELECT 2 as num;',$success2);
+		$conn->runQuery($query1);
+		$conn->runQuery($query2);
+		$conn->reapAll();
+		//results 1 and 2 should now have the respective resources!
+		sleep(1);
+		$data = $result1->fetch_assoc();
+		$this->assertEquals('1', $data['num']);
+		$data = $result2->fetch_assoc();
+		$this->assertEquals('2', $data['num']);
+
+	}
 }
